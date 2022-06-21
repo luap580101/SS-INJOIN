@@ -21,6 +21,10 @@ app.get('/', (req, res) => {
 const PrdRouter = require('./routers/prdRouter');
 app.use('/api/prd', PrdRouter);
 
+// 取得使用者資訊
+const UserInfoRouter = require('./routers/userInfoRouter');
+app.use('/api/userInfo', UserInfoRouter);
+
 // 會跳到最下方 5xx error
 app.get('/error', (req, res, next) => {
   // 發生錯誤，你丟一個錯誤出來
