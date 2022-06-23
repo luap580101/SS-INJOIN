@@ -25,6 +25,10 @@ app.use('/api/prd', PrdRouter);
 const UserInfoRouter = require('./routers/userInfoRouter');
 app.use('/api/userInfo', UserInfoRouter);
 
+// 註冊登入 /api/auth/register
+const registerRouter = require("./routers/authRouter");
+app.use('/api/auth',registerRouter);
+
 // 會跳到最下方 5xx error
 app.get('/error', (req, res, next) => {
   // 發生錯誤，你丟一個錯誤出來
